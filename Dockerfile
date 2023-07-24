@@ -5,10 +5,8 @@ ARG HELM_VERSION="3.12.0"
 ARG HELM_PLATFORM="amd64"
 
 # Add needed apk Repositories
-RUN cat <<EOF >> /etc/apk/repositories
-https://dl-cdn.alpinelinux.org/alpine/edge/main
-https://dl-cdn.alpinelinux.org/alpine/edge/community
-EOF
+RUN echo https://dl-cdn.alpinelinux.org/alpine/edge/main        >> /etc/apk/repositories && \
+    echo https://dl-cdn.alpinelinux.org/alpine/edge/community   >> /etc/apk/repositories
 
 # Install Tools
 RUN apk add --update --no-cache bash git curl yq jq kubectl gettext libintl
