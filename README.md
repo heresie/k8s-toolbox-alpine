@@ -1,9 +1,11 @@
 # Kubernetes Alphine Toolbox
 
+🐳 Docker Image with full Toolbox for Kubernetes Deployments.
+
 ## How to use
 
 ```
-docker run -it --rm herezie/k8s-toolbox-alphine:latest
+docker run -it --rm herezie/k8s-toolbox:latest
 ```
 
 ## Available tools
